@@ -1,0 +1,11 @@
+<footer class="footer-global">
+  
+    {% assign copyright_date = 'now' | date: '%Y' %}
+     
+
+    <a href="{{ 'footer.contact' | t}}">{{ 'footer.contact' | t}}</a>
+   <p>{{ 'footer.copyright' | t: date: copyright_date }}</p>
+  
+  
+</footer>
+

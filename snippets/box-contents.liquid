@@ -1,0 +1,87 @@
+{% if cart.item_count > 0 %}
+
+<a href="/" class="back-btn">
+      <img src=" {{ "arrow-back.svg" | asset_url }} ">
+      {{ 'general.shop.back' | t }}
+    </a>
+
+    <div class="box-title">
+      <h3>{{ 'cart.filled.title' | t }}</h3>
+    </div>
+
+    <form action="/cart" method="post" novalidate>
+
+      <table id="box">
+
+        <thead>
+          <th>{{ 'cart.filled.item' | t }}</th>
+          <th>{{ 'cart.filled.price' | t }}</th>
+          <th>{{ 'cart.filled.qty' | t }}</th>
+          <th>{{ 'cart.filled.total' | t }}</th>
+        </thead>
+
+        <tbody>
+
+          {% for item in cart.items %}
+            <tr class="box-line">
+
+              <!-- <td>
+                <a href="{{ item.url | within: collections.all }}">
+                  <img src="{{ item | img_url: 'small' }}" alt="{{ item.title | escape }}">
+                </a>
+              </td> -->
+
+              <td>
+                <a href="{{ item.url }}">{{ item.product.title }}</a>
+
+              </td>
+
+              <td>{{ item.price | money }}</td>
+
+              <td>
+                <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" class="box-qty">
+              </td>
+
+              <td>
+                {% if item.original_line_price != item.line_price %}
+                {{ item.original_line_price | money }}
+                {% endif %}
+
+                {{ item.line_price | money }}
+
+                {% for discount in item.discounts %}{{ discount.title }}
+                {% endfor %}
+
+                <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" id="remove-line">
+                  <img src=" {{ 'icon-x.svg' | asset_url }}">
+                </a>
+              </td>
+
+            </tr>
+          {% endfor %}
+
+        </tbody>
+      </table>
+
+      <div id="box-subtotal">
+        <p>{{ 'cart.filled.shipping_info' | t }}</p>
+        <p>{{ 'cart.filled.subtotal' | t }} {{ cart.total_price | money }}</p>
+      </div>
+
+      <div id="box-submit">
+        <button type="submit" name="update" class="button" id="update-button">Update</button>
+        <button type="submit" name="checkout" class="button" id="checkout-button">{{ 'cart.filled.checkout' | t }}</button>
+      </div>
+
+    </form>
+
+  {% else %}
+
+    <a href="/" class="back-btn">
+      <img src=" {{ "arrow-back.svg" | asset_url }} ">
+      {{ 'general.shop.back' | t }}
+    </a>
+
+    <h3 class="box-title">{{ 'cart.empty.title' | t }}</h3>
+
+  {% endif %}

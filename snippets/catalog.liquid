@@ -1,0 +1,14 @@
+{% paginate collection.products by 25 %}
+
+      {% for product in collection.products %}
+
+        {% include 'product-card' %}
+
+      {% else %}
+        <p>No matches</p>
+      {% endfor %}
+
+      {% if paginate.pages > 1 %}
+        <div id="page-nav">{{ paginate | default_pagination }}</div>
+      {% endif %}
+    {% endpaginate %}

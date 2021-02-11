@@ -1,0 +1,99 @@
+<section id="page-index">
+	<section id="three-hole-current" class="publisher">
+		<div class="publisher-name" data-id="1">
+			{% if collections.3-hole-press%}
+				<h1>{{ collections.3-hole-press.title }}</h1>
+			{% endif %}
+		</div>
+
+		<div class="publisher-collection" data-id="1">
+			{% for product in collections.3-hole-press.products limit:10 %}
+				{% include 'product-card' %}
+			{% endfor %}
+		</div>
+	 </section>
+
+	 <section id="belladonna-current" class="publisher">
+	 	<div class="publisher-name" data-id="2">
+			{% if collections.3-hole-press%}
+				<h1>{{ collections.belladonna.title }}</h1>
+			{% endif %}
+		</div>
+
+		<div class="publisher-collection" data-id="2">
+		{% for product in collections.belladonna.products limit:10 %}
+			{% include 'product-card' %}
+		{% endfor %}
+		</div>
+	 </section>
+
+	  <section id="futurepoem-current" class="publisher">
+	  	<div class="publisher-name" data-id="3">
+			{% if collections.futurepoem %}
+				<h1>{{ collections.futurepoem.title }}</h1>
+			{% endif %}
+		</div>
+
+		<div class="publisher-collection" data-id="3">
+		{% for product in collections.futurepoem.products limit:10 %}
+			{% include 'product-card' %}
+		{% endfor %}
+		</div>
+	 </section>
+
+	 <section id="litmus-current" class="publisher">
+
+		<div class="publisher-name" data-id="4">
+			{% if collections.litmus-press %}
+				<h1>{{ collections.litmus-press.title }}</h1>
+			{% endif %}
+		</div>
+	<div class="publisher-collection" data-id="4">
+	{% for product in collections.litmus-press.products limit:10 %}
+		{% include 'product-card' %}
+	{% endfor %}
+	</div>
+	 </section> 
+
+	   <section id="thick-current" class="publisher">
+	   	<div class="publisher-name" data-id="5">
+			{% if collections.thick-press %}
+				<h1>{{ collections.thick-press.title }}</h1>
+			{% endif %}
+		</div>
+
+		<div class="publisher-collection" data-id="5">
+			{% for product in collections.thick-press.products limit:10 %}
+				{% include 'product-card' %}
+			{% endfor %}
+		</div>
+		 </section>
+
+	   <section id="udp-current" class="publisher">
+	   	<div class="publisher-name" data-id="6">
+			{% if collections.ugly-duckling-presse %}
+				<h1>{{ collections.ugly-duckling-presse.title }}</h1>
+			{% endif %}
+		</div>
+
+		<div class="publisher-collection" data-id="6">
+			{% for product in collections.ugly-duckling-presse.products limit:10 %}
+			    {% include 'product-card' %}
+			{% endfor %}
+		 </div>
+	 </section>
+
+	 <section id="wendys-current" class="publisher">
+	 	<div class="publisher-name" data-id="7">
+			{% if collections.wendys-subway %}
+				<h1>{{ collections.wendys-subway.title }}</h1>
+			{% endif %}
+		</div>
+
+		<div class="publisher-collection" data-id="7">
+			{% for product in collections.wendys-subway.products limit:10 %}
+				{% include 'product-card' %}
+			{% endfor %}
+		</div>
+	 </section>
+ </section>

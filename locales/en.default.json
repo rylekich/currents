@@ -1,0 +1,54 @@
+{
+  "general": {
+    "404": {
+	    "title": "Sorry, we can't find that page.",
+      	"back": "Back to Currents"
+	    },
+	 
+	"shop":{
+		 	"title": "Currents",
+		 	"back": "Back"
+		 },
+
+	"info":{
+		 	"title": "Info"
+		 }
+ 	},
+
+	"product": {
+		"form": {
+			"quantity": "Qty",
+			"submit": "Add to Box"
+		}
+	},
+
+	"footer": {
+		"contact": "info@currents.world",
+		"copyright": "All Rights Reserved. {{ date }}" 
+	},
+
+	"cart": {
+		"filled": {
+			"title": "Your Box",
+			"shipping_info": "Shipping calculated at checkout",
+			"checkout": "Checkout",
+			"empty": "Your cart is empty",
+			"item": "Item",
+			"price": "Price",
+			"qty": "Qty",
+			"total": "Total",
+			"subtotal": "Subtotal",
+			"remove": "Remove"
+		},
+
+		"button": {
+			"count": "{{ itemCount }}",
+			"close": "Close"
+		},
+
+		"empty": {
+			"title": "Your box is empty",
+			"back": "Back to Currents"
+		}	
+	}
+}

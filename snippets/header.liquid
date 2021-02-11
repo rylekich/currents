@@ -1,0 +1,28 @@
+<header class="header-global">
+
+  <nav>
+    {% for link in linklists.main-menu.links %}
+      <a href="{{ link.url }}" class="text-link">{{ link.title }}</a>
+    {% endfor %}
+  </nav>
+
+
+{% assign cart_text = 'cart.button.count' | t: itemCount: cart.item_count %}
+{% assign cart_close_text = 'cart.button.close' | t %}
+
+   <a href="/cart" class="cart-link {% if cart.item_count > 0 %} cart-filled {% endif %} "> 
+    <span class="cart-text">{{ cart_text }}</span>
+    <span class="cart-close">{{ cart_close_text }}</span>
+   </a>
+
+ <!--    {% if shop.customer_accounts_enabled %}
+      {% if customer %}
+        <a href="/account">account</a>
+        {{ 'log out'  | customer_logout_link }}
+      {% else %}
+        {{ 'log in ' | customer_login_link }}
+        {{ 'register' | customer_register_link }}
+      {% endif %}
+    {% endif %} -->
+
+</header>

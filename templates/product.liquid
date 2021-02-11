@@ -1,0 +1,40 @@
+{% assign current_variant = product.selected_or_first_available_variant %}
+{% assign featured_image = current_variant.featured_image | default: product.featured_image %}
+
+<section id="page-product">
+
+    <a href="/" class="back-btn">
+      <img src=" {{ "arrow-back.svg" | asset_url }} ">
+      {{ 'general.shop.back' | t }}
+    </a>
+
+    <div class="product-images">
+
+      {% for image in product.images %}
+         <img src="{{ image.src | img_url: 'x700' }}" alt="{{ image.alt | escape }}">
+      {% endfor %}
+    </div>
+
+    <div class="product-info grid two-columns">
+
+        <div class="product-details">
+          <h2>{{ product.title }}</h2>
+          <h2>{{ product.price | money_without_trailing_zeros }}</h2>
+          <h2>{{ product.type }}</h2>
+          <h2> {{ product.variants.first.weight | weight_with_unit: variant.weight_unit }} </h2>
+          <h2>{{ product.vendor }}</h2>
+          <h2> ISBN {{ product.variants.first.barcode}} </h2>
+          {% include 'add-to-cart-form' %}
+        </div>
+
+        <div class="product-description">
+          <p >
+            {{ product.description }}
+          </p>
+      </div>
+
+    </div>
+
+    {% section 'product-recommendations' %}
+
+</section>

@@ -1,0 +1,24 @@
+<form action="/cart/add" method="post" enctype="multipart/form-data" id="add-to-box-form">
+  
+ <select name="id" id="productSelect">
+    {% for variant in product.variants %}
+      {% if variant.available %}
+
+        <option value="{{ variant.id }}">
+          {{ variant.title }}  
+        </option>
+
+      {% else %}
+
+        <option disabled="disabled">
+          {{ variant.title }} - sold out
+        </option>
+
+      {% endif %}
+    {% endfor %}
+  </select>
+
+  
+  <input type="number" id="Quantity" name="quantity" value="1" min="1" id="add-to-box-qty">
+  <button type="submit" name="add" id="add-to-box-button" class="button">Add to Box</button>
+</form>
