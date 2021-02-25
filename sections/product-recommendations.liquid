@@ -2,7 +2,7 @@
      class="product-recommendations"
      data-base-url="{{ routes.product_recommendations_url }}"
      data-product-id="{{ product.id }}"
-     data-limit="4"
+     data-limit="3"
    >
      {%- if recommendations.products_count > 0 -%}
      <h2>You may also like</h2>
@@ -12,13 +12,13 @@
          <a href="{{ product.url }}">
            <img
              class="product__img"
-             src="{{ product.featured_image | img_url: '300x300' }}"
+             src="{{ product.featured_image | img_url: '500x' }}"
              alt="{{ product.featured_image.alt }}"
            />
            <p class="product__title">{{ product.title }}</p>
            <p class="product__price">{{ product.price | money}}</p>
          </a>
-       </li>
+       </li> 
        {%- endfor -%}
      </ul>
      {%- endif -%}

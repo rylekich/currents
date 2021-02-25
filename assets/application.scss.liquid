@@ -99,7 +99,7 @@ $type-book: 400;
 @mixin flex-space-between{
 display: flex;
 flex-direction: row;
-align-items: center;
+align-items: baseline;
 justify-content: space-between;
 } 
 
@@ -214,6 +214,7 @@ p {
   border-radius: 10px;
 }
 
+
 /*Utility Classes*/
 .wrapper {
 	padding-left: $offset-global;
@@ -312,8 +313,8 @@ div.publisher-name.open h1::before{
 }
 
 div.publisher-collection {
-	padding: $gutter-global/2 $line-global;
-	@include flex-hor-vendor;
+	padding: $gutter-global/2 $line-global 0 $line-global;
+	// @include flex-hor-vendor;
 	}
 
 
@@ -327,6 +328,7 @@ div.product-card {
 	flex-wrap: wrap;
 	flex-direction: column;
 	padding-right: $gutter-global;
+	max-width: min-content;
 }
 
 div.card-info {
@@ -373,11 +375,11 @@ div.card-img img{
 }
 
 .product-info {
-	margin-top: $gutter-global;
+	// margin-top: $gutter-global;
 }
 .product-images {
-	@include flex-hor-vendor;
-	margin: $gutter-global 0 $gutter-global 0;
+	// @include flex-hor-vendor;
+	// margin: $gutter-global 0 $gutter-global 0;
 	padding: 0 0 $gutter-global 0;
 }
 
@@ -433,6 +435,25 @@ input#Quantity {
 	vertical-align: top;
 }
 
+#shopify-section-product-recommendations {
+	margin: $gutter-global 0 0 0;
+
+}
+
+#shopify-section-product-recommendations ul {
+	@include flex-hor-vendor;
+	padding: 0 0 $line-global 0;
+}
+
+.product__img {
+	width: 250px;
+}
+
+li.product {
+	max-width: 250px;
+	margin: 0 $line-global 0 0;
+}
+
 /*Cart aka BOX*/
 
 .box-qty {
@@ -476,6 +497,34 @@ input#Quantity {
     padding: 0 $line-global;
 }
 
+a#threehole {
+	color: $three-hole-color;
+}
+
+a#bella {
+	color: $bella-color;
+}
+
+a#futurepoem {
+	color: $future-color;
+}
+
+a#litmus {
+	color: $litmus-color;
+}
+
+a#thick {
+	color: $thick-color;
+}
+
+a#udp {
+	color: $udp-color;
+}
+
+a#ws {
+	color: $wendys-color;
+}
+
 
 // Catalog
 
@@ -485,11 +534,12 @@ input#Quantity {
 
 div.catalog-container {
 	display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(235px, 1fr));
     grid-gap: $gutter-global;
     align-items: baseline;
 }
 
 div.catalog-container div.product-card {
 	padding-right: 0;
+	max-width: 250px;
 }

@@ -3,15 +3,13 @@
 
 <section id="page-product">
 
-    <a href="/" class="back-btn">
-      <img src=" {{ "arrow-back.svg" | asset_url }} ">
-      {{ 'general.shop.back' | t }}
-    </a>
 
-    <div class="product-images">
+    <div class="product-images prod-carousel">
 
       {% for image in product.images %}
+      <div class="carousel-cell">
          <img src="{{ image.src | img_url: 'x700' }}" alt="{{ image.alt | escape }}">
+       </div>
       {% endfor %}
     </div>
 
