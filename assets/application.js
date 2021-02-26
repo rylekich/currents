@@ -11,6 +11,8 @@ $(document).ready(function() {
         prevNextButtons: false,
         pageDots: false,
         percentPosition: false
+
+        // imagesLoaded: true
       });
 
       $('.prod-carousel').flickity({

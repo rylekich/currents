@@ -17,11 +17,12 @@
 
         <div class="product-details">
           <h2>{{ product.title }}</h2>
-          <h2>{{ product.price | money_without_trailing_zeros }}</h2>
-          <h2>{{ product.type }}</h2>
-          <h2> {{ product.variants.first.weight | weight_with_unit: variant.weight_unit }} </h2>
           <h2>{{ product.vendor }}</h2>
+          <h2>{{ product.metafields.accentuate.publication_date }}</h2>
+          <h2>{{ product.type }} / {{product.metafields.specs.dimensions}} / {{product.metafields.specs.page_count}} pp</h2>
           <h2> ISBN {{ product.variants.first.barcode}} </h2>
+          <h2>{{ product.price | money_without_trailing_zeros }}</h2>
+          
           {% include 'add-to-cart-form' %}
         </div>
 
