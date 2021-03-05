@@ -1,66 +1,97 @@
-/* routed-gothic-regular - latin */
-@font-face {
-  font-family: 'RoutedGothic';
-  font-style: normal;
-  font-weight: 400;
-  src: font-url('routed-gothic', 'woff');
-  src: local(''),
-       font-url('routed-gothic', 'woff'), /* Modern Browsers */
-       font-url('routed-gothic', 'ttf'); /* Safari, Android, iOS */
-}
-/* routed-gothic-italic - latin */
-@font-face {
-  font-family: 'RoutedGothic';
-  font-style: italic;
-  font-weight: 400;
-  src: font-url('routed-gothic-italic', 'woff');
-  src: local(''),
-       font-url('routed-gothic-italic', 'woff'), /* Modern Browsers */
-       font-url('routed-gothic-italic', 'ttf'); /* Safari, Android, iOS */
+// Routed Gothic Regular
+@font-face { 
+	font-family: 'RoutedGothic'; 
+	src: url('{{ 'routed-gothic.eot?' | asset_url }}'); 
+	src: url('{{ 'routed-gothic.eot??#iefix' | asset_url }}') format('embedded-opentype'), 
+		url('{{ 'routed-gothic.woff' | asset_url }}') format('woff'), 
+		url('{{ 'routed-gothic.woff2' | asset_url }}') format('woff2'), 
+		url('{{ 'routed-gothic.ttf' | asset_url }}') format('truetype'), 
+		url('{{ 'routed-gothic.svg#routed_gothicregular' | asset_url }}') format('svg'); 
+	font-weight: normal; 
+	font-style: normal; 
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: antialiased; 
 }
 
-/* routed-narrow-gothic-regular - latin */
-@font-face {
-  font-family: 'RoutedGothicNarrow';
-  font-style: normal;
-  font-weight: 400;
-  src: font-url('routed-gothic-narrow', 'woff');
-  src: local(''),
-       font-url('routed-gothic-narrow', 'woff'), /* Modern Browsers */
-       font-url('routed-gothic-narrow', 'ttf'); /* Safari, Android, iOS */
-}
-/* routed-narrow-gothic-italic - latin */
-@font-face {
-  font-family: 'RoutedGothicNarrow';
-  font-style: italic;
-  font-weight: 400;
-  src: font-url('routed-gothic-narrow-italic', 'woff');
-  src: local(''),
-       font-url('routed-gothic-narrow-italic', 'woff'), /* Modern Browsers */
-       font-url('routed-gothic-narrow-italic', 'ttf'); /* Safari, Android, iOS */
+// Routed Gothic Regular Italic
+
+@font-face { 
+	font-family: 'RoutedGothicItal'; 
+	src: url('{{ 'routed-gothic-italic.eot?' | asset_url }}'); 
+	src: url('{{ 'routed-gothic-italic.eot??#iefix' | asset_url }}') format('embedded-opentype'), 
+		url('{{ 'routed-gothic-italic.woff' | asset_url }}') format('woff'), 
+		url('{{ 'routed-gothic-italic.woff2' | asset_url }}') format('woff2'), 
+		url('{{ 'routed-gothic-italic.ttf' | asset_url }}') format('truetype'), 
+		url('{{ 'routed-gothic-italic.svg#routed_gothicitalic' | asset_url }}') format('svg'); 
+	font-weight: normal; 
+	font-style: italic; 
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: antialiased; 
 }
 
-/* routed-wide-gothic-regular - latin */
-@font-face {
-  font-family: 'RoutedGothicWide';
-  font-style: normal;
-  font-weight: 400;
-  src: font-url('routed-gothic-wide', 'woff');
-  src: local(''),
-       font-url('routed-gothic-wide', 'woff'), /* Modern Browsers */
-       font-url('routed-gothic-wide', 'ttf'); /* Safari, Android, iOS */
-}
-/* routed-wide-gothic-italic - latin */
-@font-face {
-  font-family: 'RoutedGothicWide';
-  font-style: italic;
-  font-weight: 400;
-  src: font-url('routed-gothic-wide-italic', 'woff');
-  src: local(''),
-       font-url('routed-gothic-wide-italic', 'woff'), /* Modern Browsers */
-       font-url('routed-gothic-wide-italic', 'ttf'); /* Safari, Android, iOS */
+// Routed Gothic Narrow
+
+@font-face { 
+	font-family: 'RoutedGothicNarrow'; 
+	src: url('{{ 'routed-gothic-narrow.eot?' | asset_url }}'); 
+	src: url('{{ 'routed-gothic-narrow.eot??#iefix' | asset_url }}') format('embedded-opentype'), 
+		url('{{ 'routed-gothic-narrow.woff' | asset_url }}') format('woff'), 
+		url('{{ 'routed-gothic-narrow.woff2' | asset_url }}') format('woff2'), 
+		url('{{ 'routed-gothic-narrow.ttf' | asset_url }}') format('truetype'), 
+		url('{{ 'routed-gothic-narrow.svg#routed_gothic_narrowregular' | asset_url }}') format('svg'); 
+	font-weight: normal; 
+	font-style: normal; 
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: antialiased; 
 }
 
+// Routed Gothic Narrow Italic
+
+@font-face { 
+	font-family: 'RoutedGothicNarrowItal'; 
+	src: url('{{ 'routed-gothic-narrow-italic.eot?' | asset_url }}'); 
+	src: url('{{ 'routed-gothic-narrow-italic.eot??#iefix' | asset_url }}') format('embedded-opentype'), 
+		url('{{ 'routed-gothic-narrow-italic.woff' | asset_url }}') format('woff'), 
+		url('{{ 'routed-gothic-narrow-italic.woff2' | asset_url }}') format('woff2'), 
+		url('{{ 'routed-gothic-narrow-italic.ttf' | asset_url }}') format('truetype'), 
+		url('{{ 'routed-gothic-narrow-italic.svg#routed_gothic_narrowitalic' | asset_url }}') format('svg'); 
+	font-weight: normal; 
+	font-style: italic; 
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: antialiased; 
+}
+
+// Routed Gothic Wide
+
+@font-face { 
+	font-family: 'RoutedGothicWide'; 
+	src: url('{{ 'routed-gothic-wide.eot?' | asset_url }}'); 
+	src: url('{{ 'routed-gothic-wide.eot??#iefix' | asset_url }}') format('embedded-opentype'), 
+		url('{{ 'routed-gothic-wide.woff' | asset_url }}') format('woff'), 
+		url('{{ 'routed-gothic-wide.woff2' | asset_url }}') format('woff2'), 
+		url('{{ 'routed-gothic-wide.ttf' | asset_url }}') format('truetype'), 
+		url('{{ 'routed-gothic-wide.svg#routed_gothic_wideregular' | asset_url }}') format('svg'); 
+	font-weight: normal; 
+	font-style: normal; 
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: antialiased; 
+}
+
+// Routed Gothic Wide Italic
+
+@font-face { 
+	font-family: 'RoutedGothicWideItal'; 
+	src: url('{{ 'routed-gothic-wide-italic.eot?' | asset_url }}'); 
+	src: url('{{ 'routed-gothic-wide-italic.eot??#iefix' | asset_url }}') format('embedded-opentype'), 
+		url('{{ 'routed-gothic-wide-italic.woff' | asset_url }}') format('woff'), 
+		url('{{ 'routed-gothic-wide-italic.woff2' | asset_url }}') format('woff2'), 
+		url('{{ 'routed-gothic-wide-italic.ttf' | asset_url }}') format('truetype'), 
+		url('{{ 'routed-gothic-wide-italic.svg#routed_gothic_wideitalic' | asset_url }}') format('svg'); 
+	font-weight: normal; 
+	font-style: italic; 
+	-webkit-font-smoothing: antialiased; 
+	-moz-osx-font-smoothing: antialiased; 
+}
 
 
 $text-font: 'RoutedGothic', Arial, Helvetica, sans-serif;
@@ -155,6 +186,10 @@ body {
 
 #productSelect{
 	display: none;
+}
+
+em {
+	font-family: 'RoutedGothicItal';
 }
 
 a {
@@ -488,11 +523,16 @@ li.product {
 
 #box{
 	width: 100%;
+	border-collapse: collapse;
 
 	thead{
 		text-align: left;
 		line-height: $line-global;
 	}
+}
+
+a#remove-line img {
+	vertical-align: sub;
 }
 
 #box-submit,
@@ -501,7 +541,8 @@ li.product {
 }
 
 .box-line {
-	height: $offset-global;
+	height: $offset-global + 10px;
+	border-bottom: $standard-border;
 }
 
 // Info page
@@ -620,7 +661,7 @@ div.catalog-container div.product-card {
 	#page-catalog {
 
 		div.catalog-container {
-		    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+		    grid-template-columns: repeat(auto-fit, minmax(145px, 1fr));
 		    grid-gap: 15px;
 		}
 
@@ -673,5 +714,23 @@ div.catalog-container div.product-card {
 
 
   	// cart
+
+	  	#box {
+	  		
+	  		tr th:nth-child(3) {
+				text-align: center;
+			}
+	  		
+	  		
+			.box-qty {
+				text-align: center;
+			}
+
+
+			.box-line {
+				height: $offset-global + 25px;
+			}
+	  		
+	  	}
 
   }

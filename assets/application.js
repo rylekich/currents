@@ -7,7 +7,7 @@ $(document).ready(function() {
         contain: true,
         autoPlay: 3000,
         selectedAttraction: 0.01,
-        prevNextButtons: false,
+        // prevNextButtons: false,
         pageDots: false,
         percentPosition: false,
         resize: false,
@@ -20,7 +20,7 @@ $(document).ready(function() {
       $('.prod-carousel').flickity({
         cellAlign: 'left',
         contain: true,
-        prevNextButtons: false,
+        // prevNextButtons: false,
         selectedAttraction: 0.01,
         pageDots: false,
         percentPosition: false,

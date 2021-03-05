@@ -23,14 +23,14 @@
 	},
 
 	"footer": {
-		"contact": "info@currents.world",
-		"copyright": "All Rights Reserved. {{ date }}" 
+		"contact": "currentsbooks@gmail.com",
+		"copyright": "&copy; {{ date }}" 
 	},
 
 	"cart": {
 		"filled": {
 			"title": "Your Box",
-			"shipping_info": "Shipping calculated at checkout",
+			"shipping_info": "Booksellers get a 40% discount! Shipping + Discount calculated at checkout.",
 			"checkout": "Checkout",
 			"empty": "Your cart is empty",
 			"item": "Item",

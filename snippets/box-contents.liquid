@@ -36,7 +36,7 @@
 
               </td>
 
-              <td>{{ item.price | money }}</td>
+              <td>{{ item.price | money_without_trailing_zeros }}</td>
 
               <td>
                 <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" class="box-qty">
@@ -44,10 +44,10 @@
 
               <td>
                 {% if item.original_line_price != item.line_price %}
-                {{ item.original_line_price | money }}
+                {{ item.original_line_price | money_without_trailing_zeros }}
                 {% endif %}
 
-                {{ item.line_price | money }}
+                {{ item.line_price | money_without_trailing_zeros }}
 
                 {% for discount in item.discounts %}{{ discount.title }}
                 {% endfor %}
