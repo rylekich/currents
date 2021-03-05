@@ -11,7 +11,7 @@ https://flickity.metafizzy.co
 .flickity-viewport {
   overflow: hidden;
   position: relative;
-  height: 500px;
+  height: 450px;
 }
 
 .flickity-slider {
@@ -20,6 +20,16 @@ https://flickity.metafizzy.co
   height: 100%;
 }
 
+/* carousel height */
+.carousel {
+  height: 450px;
+}
+
+/* cell inherit height from carousel */
+/*.carousel-cell {
+  height: 100%;
+}
+*/
 /* draggable */
 
 .flickity-enabled.is-draggable {

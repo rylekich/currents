@@ -5,12 +5,14 @@ $(document).ready(function() {
       $('.main-carousel').flickity({
         cellAlign: 'left',
         contain: true,
-        autoPlay: 3500,
+        autoPlay: 3000,
         selectedAttraction: 0.01,
-        friction: 0.15,
         prevNextButtons: false,
         pageDots: false,
-        percentPosition: false
+        percentPosition: false,
+        resize: false,
+        setGallerySize: false,
+        wrapAround: true
 
         // imagesLoaded: true
       });
@@ -19,8 +21,10 @@ $(document).ready(function() {
         cellAlign: 'left',
         contain: true,
         prevNextButtons: false,
+        selectedAttraction: 0.01,
         pageDots: false,
-        percentPosition: false
+        percentPosition: false,
+        resize: false
       });
 
 
